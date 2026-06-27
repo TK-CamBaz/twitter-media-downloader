@@ -482,6 +482,7 @@ func main() {
 
 	scraper = twitterscraper.New()
 	scraper.WithReplies(true)
+	scraper.WithDelay(5) // 每次 API 請求間隔 5 秒，避免 rate limit
 	scraper.SetProxy(proxy)
 
 	// Modified login handling
